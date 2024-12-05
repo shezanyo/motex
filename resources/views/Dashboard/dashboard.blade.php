@@ -1,5 +1,8 @@
 @extends("layouts.layout")
 @section("title","Dashboard")
+@section("head")
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}" />
+@endsection
 @section("content")
     <!--section 1: Carousel start -->
     <section class="dark-gradient-background">
