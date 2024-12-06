@@ -11,7 +11,7 @@
             <h4 class="text-center">Login to your account</h4>
             <br>
             <!-- Login form -->
-            <form method="POST" action="{{ route('login') }}">
+            <form ">
                 @csrf
 
                 <!-- Email -->
