@@ -11,6 +11,7 @@
             <h4 class="text-center" >Add a new car</h4>
             <br>
             <form method="POST" action="{{ route('shop.store') }}">
+                @csrf
                 <!-- car model -->
                 <div class="form-floating mb-3 ">
                     <input type="text" class="form-control border-2" id="floatingInput" name="name" placeholder="name@example.com">
