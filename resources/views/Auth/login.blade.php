@@ -13,7 +13,6 @@
             <!-- Login form -->
             <form method="POST" action="{{ route('login') }}">
                 @csrf
-
                 <!-- Email -->
                 <div class="form-floating mb-3">
                     <input type="email" name="email" class="form-control border-2" id="floatingInput" placeholder="name@example.com" required autofocus>

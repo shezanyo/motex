@@ -20,20 +20,20 @@
                 <!-- menus -->
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav mx-auto">
-                        <a class="nav-link active nav-link-ltr" href="index.html"
+                        <a class="nav-link active nav-link-ltr" href="{{Route("shop.create")}}"
                         >Home</a>
-                        <a class="nav-link active nav-link-ltr" href="profile.html"
+                        <a class="nav-link active nav-link-ltr" href="{{Route("shop.create")}}"
                         >Profile</a>
-                        <a class="nav-link active nav-link-ltr" href="shop.html"
+                        <a class="nav-link active nav-link-ltr" href="{{Route("shop.index")}}"
                         >Shop</a>
-                        <a class="nav-link active nav-link-ltr" href="addCar.html"
+                        <a class="nav-link active nav-link-ltr" href="{{Route("shop.create")}}"
                         >Add Car</a>
                     </div>
                     <!-- login register button -->
                     <div class="">
-                        <a class="nav-link active nav-link-ltr" href="register.html"
+                        <a class="nav-link active nav-link-ltr" href="{{Route("login")}}l"
                         >Register</a>
-                        <a class="nav-link active nav-link-ltr mx-3" href="login.html"
+                        <a class="nav-link active nav-link-ltr mx-3" href="{{Route("register")}}"
                         >Login</a>
                     </div>
                 </div>
