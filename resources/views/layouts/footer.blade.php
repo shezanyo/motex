@@ -3,7 +3,7 @@
         <div class="row">
             <!-- 1 -->
             <div class="col-12 col-md-6 col-lg-3" style="margin-bottom: 20px;" >
-                <img src="images/light.png" style="width: 200px; margin-bottom: 20px;" alt="">
+                <img src="{{ asset('assets/images/light.png') }}" style="width: 200px; margin-bottom: 20px;" alt="">
                 <p>
                     We are many variations of passages available but the majority
                     have suffered alteration in some form by injected humour words

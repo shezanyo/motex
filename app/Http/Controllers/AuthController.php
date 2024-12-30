@@ -13,7 +13,7 @@ class AuthController extends Controller
     // Show login form
     public function showLoginForm()
     {
-        return view('auth.login');
+        return view('auth.login',['showNavbarInFooter' => false]);
     }
 
     // Handle login
@@ -34,7 +34,7 @@ class AuthController extends Controller
     // Show registration form
     public function showRegistrationForm()
     {
-        return view('auth.register');
+        return view('auth.register',['showNavbarInFooter' => false]);
     }
 
     // Handle registration
@@ -62,5 +62,13 @@ class AuthController extends Controller
     {
         Auth::logout();
         return redirect('/');
+    }
+    public function profile()
+    {
+        // Get the currently authenticated user
+        $user = Auth::user();
+
+        // Pass user data to the profile view
+        return view('auth.profile', compact('user'));
     }
 }

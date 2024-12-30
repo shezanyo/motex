@@ -18,13 +18,11 @@
                     <input type="email" name="email" class="form-control border-2" id="floatingInput" placeholder="name@example.com" required autofocus>
                     <label for="floatingInput">Email Address*</label>
                 </div>
-
                 <!-- Password -->
                 <div class="form-floating mb-3">
                     <input type="password" name="password" class="form-control border-2" id="floatingPassword" placeholder="Password" required>
                     <label for="floatingPassword">Password*</label>
                 </div>
-
                 <!-- Error messages -->
                 @if ($errors->any())
                     <div class="alert alert-danger">
@@ -35,7 +33,6 @@
                         </ul>
                     </div>
                 @endif
-
                 <!-- Submit button -->
                 <div class="d-grid gap-1">
                     <button class="btn btn-primary" type="submit">
