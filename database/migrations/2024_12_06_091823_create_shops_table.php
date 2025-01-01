@@ -13,6 +13,7 @@ class CreateShopsTable extends Migration
             $table->string('name');
             $table->string('brand');
             $table->decimal('price', 8, 2); // Assuming price is stored as a decimal
+            $table->string('image');
             $table->timestamps();
         });
     }

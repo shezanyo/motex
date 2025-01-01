@@ -27,9 +27,17 @@ class ShopController extends Controller
             'name' => 'required',
             'brand' => 'required',
             'price' => 'required|numeric',
+            'image' => 'required|image|mimes:jpg,png|max:2048'
         ]);
 
-        Shop::create($request->all());
+        $imagePath = $request->file('image')->store('assets/images/productCar', 'public');
+
+        Shop::create([
+            'name' => $request->name,
+            'brand' => $request->brand,
+            'price' => $request->price,
+            'image' => $imagePath,
+        ]);
 
         return redirect()->route('shop.index')
             ->with('success', 'Item created successfully.');

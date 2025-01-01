@@ -10,5 +10,5 @@ class Shop extends Model
     use HasFactory;
 
     // Specify which attributes can be mass-assigned.
-    protected $fillable = ['name', 'brand', 'price'];
+    protected $fillable = ['name', 'brand', 'price','image'];
 }

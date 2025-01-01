@@ -10,7 +10,7 @@
         <div class="divWhite formWidth p-4" style="border-radius: 20px;">
             <h4 class="text-center" >Add a new car</h4>
             <br>
-            <form method="POST" action="{{ route('shop.store') }}">
+            <form method="POST" action="{{ route('shop.store') }}" enctype="multipart/form-data">
                 @csrf
                 <!-- car model -->
                 <div class="form-floating mb-3 ">
@@ -26,6 +26,11 @@
                 <div class="form-floating mb-3">
                     <input type="number" class="form-control border-2" id="floatingPassword" name="price" placeholder="Password">
                     <label for="floatingPassword">Price*</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="file" class="form-control border-2" id="floatingPassword" name="image" accept="image/png, image/jpeg" required>
+                    <label for="floatingPassword">image*</label>
                 </div>
 
                 <div class="d-grid gap-1">
