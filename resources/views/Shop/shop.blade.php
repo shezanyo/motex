@@ -24,8 +24,8 @@
                                 <!-- add to cart button -->
                                 <button type="button" class="btn btn-success btn-sm">Add cart</button>
                                 <!-- edit button -->
-                                <a href="{{ route('shop.edit', $item->id) }}">
-                                    <button type="button" class="btn btn-secondary btn-sm">Edit</button>
+                                <a href="{{ route('shop.edit', $item->id) }}" class="btn btn-secondary btn-sm">
+                                    Edit
                                 </a>
                                 <!-- delete -->
                                 <form action="{{ route('shop.destroy', $item->id) }}" method="POST" style="display: inline;">

@@ -47,7 +47,7 @@ class ShopController extends Controller
     public function edit($id)
     {
         $item = Shop::findOrFail($id);
-        return view('shop.edit', compact('item'));
+        return view('Shop.update', compact('item'));
     }
 
     // Update the specified item in storage
@@ -57,10 +57,17 @@ class ShopController extends Controller
             'name' => 'required',
             'brand' => 'required',
             'price' => 'required|numeric',
+            'image' => 'sometimes|image|mimes:jpg,png|max:2048',
         ]);
 
         $item = Shop::findOrFail($id);
-        $item->update($request->all());
+
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('assets/images/productCar', 'public');
+            $item->image = $imagePath;
+        }
+
+        $item->update($request->except('image'));
 
         return redirect()->route('shop.index')
             ->with('success', 'Item updated successfully.');
