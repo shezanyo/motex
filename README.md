@@ -1,66 +1,277 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Motex - Motor Shop E-Commerce Platform
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+<div align="center">
 
-## About Laravel
+![Laravel](https://img.shields.io/badge/Laravel-11.x-red?logo=laravel)
+![PHP](https://img.shields.io/badge/PHP-8.2+-blue?logo=php)
+![Blade](https://img.shields.io/badge/Blade-Templates-orange)
+![TailwindCSS](https://img.shields.io/badge/Tailwind-CSS-06B6D4?logo=tailwindcss)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+A modern, full-featured e-commerce platform for buying and selling motor car products with comprehensive user authentication and inventory management.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+</div>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 📋 Project Overview
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+**Motex** is a Laravel-based e-commerce application designed specifically for motor car retailers and enthusiasts. It provides a complete solution for managing a product catalog, handling user authentication, and enabling seamless shopping experiences for customers.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Built with the latest Laravel 11 framework, Motex combines robust backend functionality with an elegant, responsive frontend powered by Blade templates and TailwindCSS.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Key Features
 
-## Laravel Sponsors
+- **🔐 User Authentication** - Secure registration, login, and profile management
+- **🛍️ Product Catalog** - Browse and manage motor car products with images and pricing
+- **📦 Inventory Management** - Full CRUD operations for shop items (Create, Read, Update, Delete)
+- **🔒 Protected Routes** - Role-based access control for admin operations
+- **💾 Database Management** - Eloquent ORM with migrations and seeders
+- **📱 Responsive Design** - Mobile-friendly interface with TailwindCSS
+- **🎨 Modern UI** - Clean, intuitive user interface with Blade templating
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+---
 
-### Premium Partners
+## 🏗️ Architecture
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### Technology Stack
 
-## Contributing
+| Layer | Technologies |
+|-------|--------------|
+| **Backend** | Laravel 11.x, PHP 8.2+ |
+| **Frontend** | Blade Templates, TailwindCSS, JavaScript, Vite |
+| **Database** | Laravel Eloquent ORM |
+| **Build Tools** | Vite, PostCSS, npm |
+| **Testing** | PHPUnit |
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Project Structure
 
-## Code of Conduct
+```
+motex/
+├── app/
+│   ├── Http/Controllers/
+│   │   ├── AuthController.php      # Authentication logic
+│   │   └── ShopController.php      # Shop CRUD operations
+│   └── Models/
+│       ├── User.php               # User model
+│       └── Shop.php               # Shop/Product model
+├── database/
+│   ├── factories/
+│   │   ├── UserFactory.php
+│   │   └── ShopFactory.php
+│   ├── migrations/                # Database schema
+│   └── seeders/
+│       └── DatabaseSeeder.php
+├── resources/
+│   └── views/
+│       ├── auth/                  # Auth templates
+│       ├── Dashboard/             # Dashboard templates
+│       └── Shop/                  # Shop templates
+├── routes/
+│   └── web.php                    # Route definitions
+├── public/                        # Public assets
+├── config/                        # Configuration files
+└── composer.json                  # PHP dependencies
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+## 🚀 Getting Started
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Prerequisites
 
-## License
+- PHP 8.2 or higher
+- Composer
+- Node.js & npm
+- SQLite or MySQL
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/shezanyo/motex.git
+   cd motex
+   ```
+
+2. **Install PHP dependencies**
+   ```bash
+   composer install
+   ```
+
+3. **Install Node dependencies**
+   ```bash
+   npm install
+   ```
+
+4. **Setup environment**
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
+
+5. **Setup database**
+   ```bash
+   php artisan migrate
+   php artisan db:seed
+   ```
+
+6. **Build assets**
+   ```bash
+   npm run dev
+   ```
+
+7. **Start the application**
+   ```bash
+   php artisan serve
+   ```
+
+   The application will be available at `http://localhost:8000`
+
+---
+
+## 📚 Core Functionality
+
+### Authentication System
+
+Users can register and log in with email and password. The application features:
+- Secure password hashing
+- Session-based authentication
+- User profiles
+- Protected dashboard
+
+**Routes:**
+- `GET /register` - Registration page
+- `POST /register` - Create new account
+- `GET /login` - Login page
+- `POST /login` - Authenticate user
+- `POST /logout` - Logout user
+- `GET /profile` - View user profile (protected)
+
+### Shop Management
+
+The shop module allows users to browse products and authenticated users to manage inventory:
+
+**Public Routes:**
+- `GET /shop` - View all products
+
+**Protected Routes (Auth Required):**
+- `GET /shop/create` - Create new product
+- `POST /shop` - Store product
+- `GET /shop/edit/{id}` - Edit product form
+- `PUT /shop/{id}` - Update product
+- `DELETE /shop/{id}` - Delete product
+
+**Product Attributes:**
+- Name
+- Brand
+- Price
+- Image (stored as file)
+
+### Dashboard
+
+Authenticated users access a personalized dashboard after login, providing easy navigation to shop and profile management.
+
+---
+
+## 🗄️ Database Schema
+
+### Users Table
+```
+- id (Primary Key)
+- name
+- email (Unique)
+- password (Hashed)
+- email_verified_at
+- remember_token
+- timestamps
+```
+
+### Shops Table
+```
+- id (Primary Key)
+- name
+- brand
+- price
+- image
+- timestamps
+```
+
+---
+
+## 🧪 Development
+
+### Running Tests
+
+```bash
+php artisan test
+```
+
+### Code Standards
+
+The project uses Laravel Pint for code formatting:
+
+```bash
+composer run pint
+```
+
+### Development Server with Hot Reload
+
+```bash
+npm run dev
+```
+
+For production builds:
+
+```bash
+npm run build
+```
+
+---
+
+## 📦 Dependencies
+
+### Key Packages
+- **Laravel Framework** (11.x) - Core framework
+- **Laravel Tinker** - REPL for Laravel
+- **FakerPHP** - Generate fake data for testing
+- **PHPUnit** - Unit testing
+- **Tailwind CSS** - Utility-first CSS framework
+- **Vite** - Build tool and dev server
+
+---
+
+## 🔐 Security Features
+
+- **CSRF Protection** - Built-in CSRF token validation
+- **Password Hashing** - Bcrypt password hashing
+- **Authentication Guards** - Session-based user authentication
+- **Authorization** - Middleware-based route protection
+- **Image Validation** - File type and size validation for product images
+
+---
+
+## 📄 License
+
+This project is open-source software licensed under the [MIT License](LICENSE).
+
+---
+
+## 👤 Author
+
+**Shezanyo** - [GitHub Profile](https://github.com/shezanyo)
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request or open an Issue for bugs and feature requests.
+
+---
+
+## 📞 Support
+
+For issues, questions, or suggestions, please open an [issue](https://github.com/shezanyo/motex/issues) on the GitHub repository.
+
+---
+
+**Made with ❤️ by the Motex Team**
